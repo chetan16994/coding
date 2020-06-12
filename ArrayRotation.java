@@ -4,22 +4,28 @@ class ArrayRotation {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int d = sc.nextInt();
-        int[] arr = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr[i]=sc.nextInt();
-        }
+        int testcase = sc.nextInt();
 
-        for (int i = 0; i < d; i++) {
-            int k=arr[0];
-            for (int j = 0; j <n-1 ; j++) {
-                arr[j]=arr[j+1];
+        while (testcase-- > 0) {
+
+            int n = sc.nextInt();
+            int d = sc.nextInt();
+
+            int[] arr = new int[n];
+            int[] temp = new int[d];
+            for (int i = 0; i < n; i++) {
+                if (i < d) {
+                    temp[i] = sc.nextInt();
+                } else {
+                    arr[i - d] = sc.nextInt();
+                }
             }
-            arr[n-1]=k;
-        }
-        for (int i = 0; i <n ; i++) {
-            System.out.println(arr[i]);
+            for (int j = 0, i = n - d; i < n; j++, i++) {
+                arr[i] = temp[j];
+            }
+            for (int i = 0; i < n; i++) {
+                System.out.println(arr[i]);
+            }
         }
     }
 }
