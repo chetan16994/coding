@@ -17,7 +17,6 @@ class ArrayRotationJugglingAlgo {
 
         BigInteger gcd=b1.gcd(b2);
         Integer gcd1= new Integer(String.valueOf(gcd));
-        System.out.println(gcd1);
 
         for (int i = 0; i < gcd1; i++) {
             int k,temp=arr[i];
