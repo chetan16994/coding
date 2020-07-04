@@ -5,6 +5,7 @@ public class TwoPointer {
     // https://www.geeksforgeeks.org/given-an-array-a-and-a-number-x-check-for-pair-in-a-with-sum-as-x/
     // check using hashing
     
+    
     static boolean isPairSum(int[] arr,int n){
         Arrays.sort(arr);
         int i=0;
