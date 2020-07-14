@@ -1,18 +1,18 @@
 public class MoveZero {
 
     static void move(int arr[]){
-        int arr1[]=new int[arr.length];
+//        int arr1[]=new int[arr.length];
         int j=0;
         for (int i=0;i<arr.length;i++){
             if (arr[i]!=0) {
-                arr1[j]=arr[i];
+                arr[j]=arr[i];
                 j++;
             }
         }
         while(j<arr.length)
-            arr1[j++]=0;
+            arr[j++]=0;
 
-        for (int i:arr1) {
+        for (int i:arr) {
             System.out.println(i);
         }
     }
