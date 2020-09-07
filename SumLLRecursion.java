@@ -35,7 +35,7 @@ static int sum=0;
 
 
 public static void sumNode(Node head){
-    System.out.println(head.data);
+//     System.out.println(head.data);
 
     if (head==null)
         return;
